@@ -1,0 +1,309 @@
+/* css custom font size and weight file */
+@import "fonts.css";
+body{
+    padding:0;
+    margin: 0;
+} 
+a{
+    text-decoration: none;
+}
+.text-grey{
+    color:#7D7D7D;
+}
+.text-dark-grey{
+    color: #3D3D3D;
+}
+.text-yellow, .select-theme{
+    color: var(--secondary-color);
+}
+.text-blue, .footer-hover:hover p, .footer-hover:hover h4, .btn-white-hover:hover{
+    color:var(--primary-color) !important;
+}
+.bg-blue, a:hover .service-box, .navbar-nav .nav-item::after, .btn-blue-hover:hover, .other-icons .icon:hover, .footer-hover:hover .footer-icon{
+    background: var(--primary-color);
+}
+.bg-yellow {
+    background: var(--secondary-color);
+}
+.bg-light-grey{
+    background: #F4F4F4;
+}
+.bg-light-grey2{
+    background:#F8F8F8;
+}
+.btn-white-hover:hover{
+ background-color: #fff;
+}
+.py-70{
+    padding: 70px 0;
+}
+/* theme section css */
+#icon{
+    cursor: pointer;
+}
+.original-theme{
+    background-image: linear-gradient(#FCB503, #061244);  
+}
+.theme1{
+ background-image: linear-gradient(#5cb575, black);
+}
+.theme2{
+ background-image: linear-gradient(red, #f4c200);
+}
+.theme3{
+ background-image: linear-gradient(#e8ba40, #00598d);
+}
+.theme4{
+ background-image: linear-gradient(rgb(127, 140, 141), rgb(36, 18, 44));
+}
+.theme5{
+ background-image: linear-gradient(blue, rgb(247, 154, 169));
+}
+.theme6{
+ background-image: linear-gradient(blue, rgb(121, 49, 61));
+}  
+.select-theme{
+    width: 60px;
+    position: absolute;
+    right:0;
+    top: 22px;
+    z-index: 1;
+ }
+.select-theme li{
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+.select-theme:hover li{
+    display: block;
+}
+/* theme section css end */
+
+/* navbar section start */
+.navbar .navbar-nav .nav-item::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: "";
+    height: 4px;
+    transition: all 0.5s;
+}
+  .navbar .navbar-nav .nav-item:hover::after {
+    width: 100%;
+ }
+.navbar {
+    font-family: lora-bold; 
+    --bs-navbar-toggler-border-color:var(--primary-color);
+}
+.navbar button{
+  border: 3px solid var(--primary-color);   
+
+}
+/* navbar section end */
+
+/* banner-home section start */
+.banner-home{
+    border-top: 10px solid  var(--secondary-color);
+    border-bottom: 10px solid  var(--secondary-color);
+}
+.banner-img{
+    margin-top: -8px;
+    margin-bottom: -9px;
+}
+.outer{
+    top: 0; 
+    left: 0;
+    background-image: url(images/banner/banner-img.png);
+    clip-path: polygon(5% 13%, 100% 4%, 100% 95%, 5% 86%);
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-color: white;  
+}
+.frame-fill{
+    fill: var(--secondary-color);
+}
+.frame-stroke{
+    stroke: var(--secondary-color);
+    stroke-width: 8;
+}
+/* banner-home section end */
+
+/* new movers section start */
+.properties li::before{
+    content: url(images/newMoversSec/check.png);
+    width: 30px;
+    height: 30px;
+    background:#FBE09E;
+    padding: 7px 10px;
+    border-radius: 5px;
+    margin-right:15px;
+    margin-left: 20px;
+}
+.properties li{
+    font-family: lora-Regular;
+    font-size: 18px;
+}
+/* new movers section end */
+
+/* request account free section start */
+.request-account{
+    background-image: url(images/request_free-account/bg-home\ 1.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+/* request account free section end */
+
+/* services section start */
+.service-box{
+    border-top-left-radius:50px;
+}
+.service-icon{
+    border-top-right-radius:30px;
+    width: 70px;
+    height: 70px;
+    top: 0;
+    right: 0;
+    margin-top: -35px;
+    border:3px solid rgba(0,0,0,0);
+}
+a:hover h4, a:hover p{
+    color: white;
+}
+/* services section end */
+
+/* form section start */
+form img{
+    width: 18px;
+    left: 0;
+}
+.fix-icon{
+    top: 50%;
+    margin-top: -9px;
+}
+.fix-msg-icon{
+    top: 0;
+}
+/* form section end */
+
+/* accordian start */ 
+ .accordion{
+    --bs-accordion-btn-focus-box-shadow:none;
+    --bs-accordion-active-bg:#F8F8F8;
+    --bs-accordion-btn-padding-y:4px;
+ }
+ .accordion-button:not(.collapsed)::after{
+    background: url(images/accordion/up.png); 
+    background-repeat: no-repeat;
+    background-size: 11px;
+    background-position: center;
+    transform: rotate(0deg);
+}
+.accordion-button::after{
+    background-image: url(images/accordion/down.png);
+    background-size: 11px;
+    border-radius: 50%;
+    padding: 15px;
+    background-position: center;
+}
+.accordion-button::after, .accordion-button:not(.collapsed)::after {
+    background-color: var(--secondary-color);
+}
+/* accordion end */
+
+/* footer section start */
+ .footer-icon{
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 50%;
+    margin-left: -30px;
+    margin-top: -30px;
+ }
+ .other-icons .icon{
+    width: 30px;
+    height: 30px;
+ }
+ .footer-icon img{
+    width: 25px;
+ }
+.footer-hover:hover .footer-box{
+ background-color: #fff !important;
+}
+/* footer section end */
+
+/* mrdia query */
+@media only screen and (max-width:576px){
+    .section{
+        padding: 50px 20px !important;
+    }
+    .navbar-brand{
+        font-size: 25px;
+    }
+    h1{
+        font-size: 35px;
+        line-height: 45px;
+    }
+    h2{
+        font-size: 30px;
+    }
+    .properties li{
+        font-size: 14px;
+    } 
+    .select-theme{
+        top: 15px;
+        right: 20%;
+      } 
+}
+
+@media only screen and (min-width:576px) and (max-width:768px){
+    .section{
+        padding: 50px 40px;
+    }
+    h1{
+        font-size: 35px;
+        line-height: 45px;
+    }
+    h2{
+        font-size: 30px;
+    }
+    .properties li{
+        font-size: 14px;
+    } 
+    .select-theme{
+      right: 10%;
+    }
+}
+@media only screen and (min-width:768px) and (max-width:992px){
+    .section{
+        padding: 50px 50px;
+    }
+    h1{
+        font-size: 40px;
+        line-height: 50px;
+    }
+    h2{
+        font-size: 30px;
+    }
+    .properties li{
+        font-size: 14px;
+    }
+    .select-theme{
+        right: 8%;
+    }  
+}
+@media only screen and (min-width:992px) and (max-width:1110px){
+     
+        h1{
+            font-size: 45px;
+            line-height: 55px;
+        }
+}
+
+
+
+
+ 

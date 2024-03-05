@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewMovers</title>
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- custom style sheet -->
+    <link id="themeStyleSheet" rel="stylesheet" href="default-theme.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>     
+        if(localStorage.getItem('defaultTheme')) {
+            $('#themeStyleSheet').attr('href', localStorage.getItem('defaultTheme'));
+        }
+    </script>
+</head>
+<body>
+    <!-- navbar  -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary px-4">
+        <div class="container-fluid px-lg-5 mx-lg-5">
+          <a class="navbar-brand font-size-35" href="#"><span class="text-yellow">New</span><span class="text-blue">Movers</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="text-blue fw-bolder"><i class="fa-solid fa-bars"></i></span>
+          </button>
+          <div class="collapse navbar-collapse text-center text-lg-start" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item mx-2 mx-xl-4 position-relative ">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item mx-2 mx-xl-4 position-relative">
+                <a class="nav-link" href="#">About Us</a>
+              </li>
+              <li class="nav-item mx-2 mx-xl-4 position-relative">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item mx-2 mx-xl-4 position-relative">
+                <a class="nav-link" href="#">Contact Us </a>
+              </li>
+            </ul>
+            <div>
+                <a href="#" class="btn btn-blue-hover bg-yellow text-white rounded-1 px-4 ms-lg-4 fw-600">Login</a>
+            </div>
+          </div>
+        </div>
+    </nav>
+     <!-- code for theme -->
+     <span class="select-theme"> 
+        <i class="fa-solid fa-palette mx-lg-auto font-size-35 " id="icon"></i>
+        <ul class="list-unstyled">
+            <li id="default-theme" class=" btn rounded-circle original-theme my-2 border-0" onclick="updateTheme('default-theme.css')"></li>
+            <li id="theme1" class=" btn rounded-circle theme1 my-2 border-0" onclick="updateTheme('theme1.css')"></li>
+            <li id="theme2" class=" btn rounded-circle theme2 my-2 border-0" onclick="updateTheme('theme2.css')"></li>
+            <li id="theme3" class=" btn rounded-circle theme3 my-2 border-0" onclick="updateTheme('theme3.css')"></li>
+            <li id="theme4" class=" btn rounded-circle theme4 my-2 border-0" onclick="updateTheme('theme4.css')"></li>
+            <li id="theme5" class=" btn rounded-circle theme5 my-2 border-0" onclick="updateTheme('theme5.css')"></li>
+            <li id="theme6" class=" btn rounded-circle theme6 my-2 border-0" onclick="updateTheme('theme6.css')"></li>
+        </ul>
+     </span> 
+     <!-- theme sec end -->
+    <!-- navbar end -->
+     
+    <!-- banner section start -->
+    <div class="banner-home bg-blue overflow-hidden">
+        <div class="container-fluid g-0">
+             <div class="row ps-md-5">
+                <div class="col-12 col-md-6 ps-lg-5 align-self-center">
+                  <div class="banner-content pe-xl-4 py-5 py-md-0">
+                       <div class="pe-4 pe-md-0 ps-4 ps-sm-5">
+                        <h1 class="text-white"><span class="text-yellow">Let us</span> optimize <span class="text-yellow">your</span> Business</h1>
+                        <h6 class="text-white pt-3 pt-lg-4"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac arcu lorem elementum faucibus.</h6>
+                        <a href="#" class="btn btn-white-hover fw-600 bg-yellow text-white px-4 mt-4 rounded-1">Get Started</a> 
+                       </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 align-self-center ">
+                    <div class="position-relative d-none d-md-block banner-img">
+                        <svg width="100%" height="100%" viewBox="0 0 1009 817" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M51 697.5L908.448 806H1009V773.851L51 697.5Z" class="frame-fill" />
+                            <path d="M745 4.5L29 93.5V593" class="frame-stroke"/>
+                            <path d="M789.5 813L4 717V203.5" class="frame-stroke"/>
+                            <path d="M48 113L908.448 6H1009V38.1488L48 113Z" class="frame-fill"/>
+                        </svg>
+                        <div class="outer position-absolute"></div>
+                    </div> 
+                </div>
+             </div>
+        </div>
+    </div>
+    <!-- banner section start -->
+
+    <!-- new Movers section start -->
+     <div class="newmovers py-70 overflow-hidden">
+         <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 align-self-center">
+                     <h2 class="text-blue pb-3">New Movers that fits your <span class="text-yellow">property business</span></h2>
+                      <div class="properties mt-4 list-unstyled fw-600 font-size-20 border rounded-3 text-dark-grey">
+                         <li class="pt-3 ">Lorem ipsum dolor sit ame</li>
+                         <li class="pt-4">Lorem ipsum dolor sit ame</li>
+                         <li class="pt-4">Lorem ipsum dolor sit ame</li>
+                         <li class="pt-4 pb-3">Lorem ipsum dolor sit ame</li>
+                      </div>
+                      <h6 class="mt-3 text-dark-grey py-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet ipsum diam. Vestibulum id mauris ac velit elementum faucibus. Cras sodales eros eget lorem scelerisque molestie. Fusce vulputate pellentesque dolor, ut scelerisque magna dignissim id.</h6>
+                      <a href="#" class="btn btn-blue-hover bg-yellow fw-600 text-white px-4 rounded-1 mb-3 mb-lg-0">Read More</a>
+                 </div>
+                <div class="col-12 col-md-6 align-self-center">
+                    <img src="images/newMoversSec/newMovers.png" class="img-fluid">
+                </div>
+            </div>
+         </div>
+     </div>    
+    <!-- new Movers section end -->
+
+    <!-- request account free section start -->
+    <div class="request-account bg-blue py-70 overflow-hidden">
+        <div class="container">
+            <div class="row">
+               <div class="col-12 col-md-6">
+                   <h3 class="text-white">Request A Free Account</h3>
+                   <p class="text-white mb-0 mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet ipsum diam. Vestibulum id mauris ac velit elementum faucibus. </p>
+               </div>
+               <div class="col-12 col-md-6 align-self-center text-md-end mt-3 mt-md-0">
+                  <a href="#" class="btn bg-yellow btn-white-hover fw-600 text-white px-4 rounded-1">Get Started</a>
+               </div>
+            </div>
+        </div>
+    </div>
+    <!-- request account free section end-->
+
+    <!--services section start -->
+    <div class="services py-70 overflow-hidden">
+        <div class="container">
+           <div class="row justify-content-center text-center mb-4">
+              <div class="col-12 col-md-6">
+                 <h3 class="text-blue">Featured Services</h3>
+                 <p class="text-grey">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, reprehenderit assumenda natus mollitia totam corrupti. Blanditiis, dignissimos culpa?</p>
+              </div>
+           </div>
+           <div class="row pt-5">
+               <!-- service box 1 -->
+               <div class="col-12 col-md-6 col-lg-4 pb-5 pb-lg-0">
+                   <a href="#" class="position-relative">
+                       <div class="service-icon  font-size-35 me-4 position-absolute bg-yellow text-white d-flex justify-content-center align-items-center">
+                          <i class="fa-solid fa-house-chimney-user"></i>
+                       </div> 
+                       <div class="service-box py-5 px-4 bg-light-grey">
+                           <h4 class="text-blue pt-3 pb-2">Service 1</h4>
+                           <p class="text-grey mb-0">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quis modi dolor atque quos placeat repellat quae nam distinctio similique.</p>
+                       </div>
+                   </a>
+               </div>
+               <!-- service box 2 -->
+               <div class="col-12 col-md-6 col-lg-4 pb-5 pb-lg-0">
+                   <a href="#" class="position-relative">
+                       <div class="service-icon font-size-35 me-4 position-absolute bg-yellow text-white d-flex justify-content-center align-items-center">
+                          <i class="fa-regular fa-user"></i>
+                       </div> 
+                       <div class="service-box py-5 px-4 bg-light-grey">
+                           <h4 class="text-blue pt-3 pb-2">Service 2</h4>
+                           <p class="text-grey mb-0">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quis modi dolor atque quos placeat repellat quae nam distinctio similique.</p>
+                       </div>
+                   </a>
+               </div>
+               <!-- service box 3 -->
+               <div class="col-12 col-md-6 col-lg-4 m-auto">
+                   <a href="#" class="position-relative">
+                       <div class="service-icon font-size-35 me-4 position-absolute bg-yellow text-white d-flex justify-content-center align-items-center">
+                          <i class="fa-solid fa-sack-dollar"></i>
+                       </div> 
+                       <div class="service-box py-5 px-4 bg-light-grey">
+                           <h4 class="text-blue pt-3 pb-2">Service 3</h4>
+                           <p class="text-grey mb-0">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quis modi dolor atque quos placeat repellat quae nam distinctio similique.</p>
+                       </div>
+                   </a>
+               </div>
+           </div>
+        </div>
+    </div>
+    <!--services section end -->
+
+    <!--form and accordion section start -->
+     <div class="userquery py-70 bg-light-grey overflow-hidden">
+        <div class="container">
+           <div class="row">
+               <div class="col-12 col-lg-6 order-last order-lg-first mt-5 mt-lg-0">
+                   <h3 class="text-blue">Leave Us A Reply</h3>
+                   <p class="text-grey">Lorem ipsum dolor sit amet consectetur. Sapien in adipiscing duisorci. Rhoncus nunc nibh auctor porta tincidunt acporttitor proin ac viverra auctor porta.</p>
+                   <form>
+                       <div class="mb-3 position-relative">
+                           <input type="text" class="form-control ps-5 py-2 bg-light-grey2" id="name" placeholder="Name">
+                           <img src="images/form-secImg/person.png" class="position-absolute fix-icon ms-3">
+                       </div>
+                       <div class="mb-3 position-relative">
+                           <input type="text" class="form-control ps-5 py-2 bg-light-grey2" id="phone-no" placeholder="Phone No.">
+                           <img src="images/form-secImg/call.png" class="position-absolute fix-icon ms-3">
+                       </div>
+                       <div class="mb-3 position-relative">  
+                           <input type="email" class="form-control ps-5 py-2 bg-light-grey2" id="email" placeholder="Email">
+                           <img src="images/form-secImg/mail.png" class="position-absolute fix-icon ms-3">
+                       </div>
+                       <div class="mb-3 position-relative">
+                           <input type="text" class="form-control ps-5 py-2 bg-light-grey2" id="subject" placeholder="subject">
+                           <img src="images/form-secImg/description.png" class="position-absolute fix-icon ms-3">
+                       </div>
+                       <div class="mb-3 position-relative">
+                           <textarea name="msg" id="" rows="4" class="form-control ps-5 py-2 bg-light-grey2" id="msg" placeholder="Message"></textarea>
+                           <img src="images/form-secImg/forum.png" class="position-absolute fix-msg-icon mt-3 ms-3">
+                       </div>
+                      <a type="submit" class="btn btn-blue-hover bg-yellow fw-600 rounded-1 py-2 px-4 text-white mb-5 mt-3 mb-lg-0">Send Message</a>
+                  </form>
+               </div>  
+                <!-- accordia start -->
+                <div class="col-12 col-lg-6">
+                    <h3 class="text-blue">Frequently Asked Questions</h3>
+                    <p class="text-grey">Lorem ipsum dolor sit amet consectetur. Sapien in adipiscing duisorci. Rhoncus nunc nibh auctor porta tincidunt acporttitor proin ac viverra auctor porta.</p> 
+                   <div class="accordion" id="accordion">
+                     <div class="accordion-item mb-3 bg-light-grey2 border">
+                         <h2 class="accordion-header border-bottom mx-3">
+                             <button class="accordion-button font-size-14 bg-light-grey2 py-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                                <span class="lh-1">What is New Movers, and which services does it provide?</span>
+                             </button>
+                         </h2>
+                         <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#accordion">
+                            <p class="accordion-body bg-light-grey2 text-grey mx-3">
+                             Lenders are trying to assess if you can afford mortgage repayments, so they'll ask you about your income (the money you have coming in) and expenses (the money you're likely to spend). They're likely to ask about outstanding and ongoing payments, including: credit card and loan balances.
+                            </p>
+                         </div>
+                     </div>
+                     <!-- item 2 -->
+                     <div class="accordion-item mb-3 bg-light-grey2 border">
+                        <h2 class="accordion-header border-bottom mx-3">
+                            <button class="accordion-button font-size-14 collapsed bg-light-grey2 py-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                               <span class="lh-1">Do I need an account to use NewMovers to set up utilities?</span>
+                            </button>
+                       </h2>
+                       <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                          <p class="accordion-body bg-light-grey2 text-grey mx-3">
+                          Lenders are trying to assess if you can afford mortgage repayments, so they'll ask you about your income (the money you have coming in) and expenses (the money you're likely to spend). They're likely to ask about outstanding and ongoing payments, including: credit card and loan balances.
+                         </p>
+                       </div>
+                     </div>
+                     <!-- item 3 -->
+                     <div class="accordion-item mb-3 bg-light-grey2 border">
+                        <h2 class="accordion-header border-bottom mx-3">
+                            <button class="accordion-button font-size-14 collapsed bg-light-grey2 py-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" >
+                                <span class="lh-1">Do I need an account to use NewMovers to set up utilities?</span>
+                            </button>
+                        </h2>
+                        <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                           <p class="accordion-body bg-light-grey2 text-grey mx-3">
+                             Lenders are trying to assess if you can afford mortgage repayments, so they'll ask you about your income (the money you have coming in) and expenses (the money you're likely to spend). They're likely to ask about outstanding and ongoing payments, including: credit card and loan balances.
+                           </p>
+                        </div>
+                     </div>
+                     <!-- item 4 -->
+                     <div class="accordion-item mb-3 bg-light-grey2 border">
+                        <h2 class="accordion-header border-bottom mx-3">
+                            <button class="accordion-button font-size-14 collapsed bg-light-grey2 py-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+                               <span class="lh-1">Do I need an account to use NewMovers to set up utilities?</span>
+                           </button>
+                        </h2>
+                        <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                           <p class="accordion-body bg-light-grey2 text-grey mx-3">
+                              Lenders are trying to assess if you can afford mortgage repayments, so they'll ask you about your income (the money you have coming in) and expenses (the money you're likely to spend). They're likely to ask about outstanding and ongoing payments, including: credit card and loan balances.
+                           </p>
+                        </div>
+                     </div>
+                   </div>
+                </div>
+           </div>
+        </div>
+     </div>
+     <!--form and accordion section end -->
+
+    <!--footer section start -->
+    <div class="footer py-70 bg-dark overflow-hidden">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+              <div class="col-12 col-md-6">
+                 <h3 class="text-white">Contact & Support</h3>
+                 <p class="text-grey my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, reprehenderit assumenda natus mollitia totam corrupti. Blanditiis, dignissimos culpa?</p>
+              </div>
+           </div>
+           <div class="row pt-5">
+              <!-- footer box 1 -->
+              <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0">
+                  <a href="#" class="position-relative footer-hover">
+                      <div class="footer-icon rounded-circle bg-yellow position-absolute d-flex justify-content-center align-items-center">
+                          <img src="images/footer-sec-images/mail.png" class="img-fluid">
+                      </div>
+                      <div class="footer-box text-white bg-black text-center pt-5 pb-4">
+                         <h4 class="pt-3">Email</h4>
+                         <p class="mb-0 pt-1">info@newmovers.com</p>
+                         <p>support@newmovers.com</p>
+                      </div>
+                  </a>
+              </div>
+              <!-- footer box 2 -->
+               <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0">
+                  <a href="#" class="position-relative footer-hover">
+                      <div class="footer-icon rounded-circle bg-yellow position-absolute d-flex justify-content-center align-items-center">
+                          <img src="images/footer-sec-images/call.png" class="img-fluid">
+                      </div>
+                      <div class="footer-box text-white bg-black text-center pt-5 pb-4">
+                         <h4 class="pt-3">Phone</h4>
+                         <p class="mb-0 pt-1">info@newmovers.com</p>
+                         <p>support@newmovers.com</p>
+                       </div>
+                  </a>
+              </div>
+              <!-- footer box 3 -->
+               <div class="col-12 col-md-8 col-lg-4 m-auto">
+                  <a href="#" class="position-relative footer-hover">
+                      <div class="footer-icon rounded-circle bg-yellow position-absolute d-flex justify-content-center align-items-center">
+                          <img src="images/footer-sec-images/location.png" class="img-fluid">
+                      </div>
+                      <div class="footer-box text-white bg-black text-center pt-5 pb-4">
+                         <h4 class="pt-3">Location</h4>
+                         <p class="mb-0 pt-1">info@newmovers.com</p>
+                         <p>support@newmovers.com</p>
+                    </div>
+                  </a>
+              </div>
+           </div>
+           <div class="row justify-content-center text-center mt-5">
+              <div class="col-12 col-md-6">
+                  <h4 class="text-white mb-3">Follow Me On Social Media</h4>
+                  <p class="text-grey">Lorem ipsum at, natus mollitia totam corrupti. Blanditiis, dignissimos culpa?</p>
+              </div>
+           </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12 d-flex justify-content-center">
+              <div class="other-icons d-flex">
+                <!-- icon 1 -->
+                <div class="icon rounded-3 bg-yellow mx-1">
+                   <a href="#"><img src="images/footer-sec-images/twitter.png" class="img-fluid p-2"></a>
+                </div>
+                <!-- icon 2 -->
+                <div class="icon rounded-3 bg-yellow mx-1">
+                   <a href="#"><img src="images/footer-sec-images/fb.png" class="img-fluid px-2 py-1"></a>
+                </div>
+                <!-- icon 3 -->
+                <div class="icon rounded-3 bg-yellow mx-1">
+                   <a href="#"><img src="images/footer-sec-images/pintrest.png" class="img-fluid p-2"></a>
+                </div>
+                <!-- icon 4 -->
+                <div class="icon rounded-3 bg-yellow mx-1">
+                   <a href="#"><img src="images/footer-sec-images/linkedin.png" class="img-fluid p-2"></a>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="copywrite bg-yellow">
+        <div class="container py-2">
+            <div class="row font-size-13">
+                <div class="col-12 col-md-6 text-center text-md-start">
+                     <h6 class="my-0">© New Movers 2024 | All Rights Reserved</h6>
+                </div>
+                <div class="col-12 col-md-6 text-center text-md-end pt-2 pt-md-0">
+                    <a href="#" class="text-black px-2">Terms & Condition</a>
+                    <a href="#" class="text-black px-2"> Privacy Policy </a>
+                    <a href="#" class="text-black px-2">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer section end -->
+  
+    <!--js code for theme color change -->
+
+
+    <script>
+    function updateTheme(themeCss) {
+        $('#themeStyleSheet').attr('href', themeCss);
+        localStorage.setItem('defaultTheme', themeCss)
+    }
+
+    //    $('#theme1').click(function (){
+    //         $('#themeStyleSheet').attr('href','theme-1.css');
+    //     });
+    //    $('#theme2').click(function (){
+    //        $('#themeStyleSheet').attr('href','theme-2.css');
+    //     });
+    //     $('#theme3').click(function (){
+    //        $('#themeStyleSheet').attr('href','theme-3.css');
+    //     });
+    //     $('#theme4').click(function (){
+    //        $('#themeStyleSheet').attr('href','theme-4.css');
+    //     });
+    //     $('#theme5').click(function (){
+    //        $('#themeStyleSheet').attr('href','theme-5.css');
+    //     });
+    //     $('#theme6').click(function (){
+    //        $('#themeStyleSheet').attr('href','theme-6.css');
+    //     });
+
+
+    
+
+     
+    </script>
+    
+
+</body>
+</html>

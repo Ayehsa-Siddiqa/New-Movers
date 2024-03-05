@@ -1,0 +1,62 @@
+/* lora font faces */
+@font-face {
+    font-family: lora-bold;
+    src: url(customFonts/lora/Lora-Bold.ttf);
+}
+@font-face {
+    font-family: lora-Regular;
+    src: url(customFonts/lora/Lora-Regular.ttf);
+}
+/* sppinaker url */
+@import url('https://fonts.googleapis.com/css2?family=Spinnaker&display=swap');
+
+
+h1{
+    font-size: 65px;
+    font-family: lora-bold; 
+    line-height: 75px;
+}
+h2{
+    font-size: 40px;
+    font-family: lora-bold;
+    line-height: 43px;
+}
+h3{
+   font-size: 35px;
+   font-family: lora-bold;
+   line-height: 40px; 
+}
+h4{
+    font-size: 25px;
+    font-family: lora-bold;
+}
+h6{
+    font-family: 'Spinnaker', sans-serif;
+    font-size: 14px;
+    line-height: 23px;
+}
+p{
+   font-family: 'Spinnaker', sans-serif; 
+   font-size: 13px; 
+   line-height:23px; 
+}
+.font-size-35{
+    font-size: 35px;
+}
+.font-size-13, h6{
+    font-size: 12px;
+    font-family: Arial;
+    font-weight: 600;
+}
+.font-size-14{
+    font-size: 14px;
+}
+.font-size-35{
+ font-size: 35px;
+}
+.font-size-18{
+    font-size: 18px;
+}
+.fw-600{
+    font-weight: 600;
+}
